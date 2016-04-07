@@ -1,7 +1,4 @@
 //
-//  main.m
-//  ACGInitialsExample
-//
 //  Created by Andrea Cipriani on 07/04/16.
 //
 //

@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ACGInitialsExample.xcodeproj">
+      location = "self:/Users/raiden996/Work/Workspace/XcodeWorkSpace/ACGInitials/AGCInitials.xcodeproj">
    </FileRef>
 </Workspace>

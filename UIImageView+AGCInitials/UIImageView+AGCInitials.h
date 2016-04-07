@@ -5,7 +5,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ACGInitialsExampleViewController : UIViewController
+@interface UIImageView (AGCInitials)
 
 @end
-
