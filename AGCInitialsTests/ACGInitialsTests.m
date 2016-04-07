@@ -5,6 +5,7 @@
 
 #import <XCTest/XCTest.h>
 #import "UIImageView+AGCInitials.h"
+
 @interface AGCInitialsTests : XCTestCase
 
 @property UIImageView* imageView;

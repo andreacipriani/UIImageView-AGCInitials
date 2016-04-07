@@ -14,6 +14,7 @@
 
 - (void)agc_setImageWithInitialsFromName:(nonnull NSString*)name separatedByString:(nonnull NSString*)separator
 {
+    
 }
 
 #pragma mark - Private utils
