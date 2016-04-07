@@ -5,6 +5,8 @@
 
 #import <XCTest/XCTest.h>
 #import "UIImageView+AGCInitials.h"
+#import "OCMock.h"
+#import "ACGInitialsColors.h"
 
 @interface AGCInitialsTests : XCTestCase
 
@@ -29,6 +31,13 @@
 {
     [_imageView agc_setImageWithInitials:@"AC"];
     NSAssert(_imageView.image, @"Image is nil after setting with initials");
+}
+
+#pragma mark - Initials + Colors collaboration
+
+-(void)testColorForStringIsCalledCorrectly
+{
+    id acgColorsMock = OCMClassMock([ACGInitialsColors class]);
 }
 
 @end

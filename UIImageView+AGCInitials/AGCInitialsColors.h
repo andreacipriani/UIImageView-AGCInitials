@@ -6,7 +6,7 @@
 #import <Foundation/Foundation.h>
 @import UIKit;
 
-@interface ACGInitialsColors : NSObject
+@interface AGCInitialsColors : NSObject
 
 + (id _Nonnull)sharedInstance;
 

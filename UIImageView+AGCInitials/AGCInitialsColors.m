@@ -3,19 +3,19 @@
 //
 //
 
-#import "ACGInitialsColors.h"
+#import "AGCInitialsColors.h"
 
-@interface ACGInitialsColors ()
+@interface AGCInitialsColors ()
 
 @property (nonatomic, strong) NSMutableDictionary<NSString*, UIColor*>* cachedColorsForStrings;
 
 @end
 
-@implementation ACGInitialsColors
+@implementation AGCInitialsColors
 
 + (id _Nonnull)sharedInstance
 {
-    static ACGInitialsColors* sharedInstance = nil;
+    static AGCInitialsColors* sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[self alloc] initWithDefaultColorPalette];
