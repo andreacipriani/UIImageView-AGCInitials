@@ -35,10 +35,11 @@
 
 #pragma mark - Initials + Colors collaboration
 
--(void)testColorForStringIsCalledCorrectly
+-(void)testImageWithInitialsWithColorForString
 {
-    //id agcColorsMock = OCMPartialMock([AGCInitialsColors sharedInstance]);
-    
+    id agcColorsMock = OCMPartialMock([AGCInitialsColors sharedInstance]);
+    [_imageView agc_setImageWithInitials:@"AC"];
+    OCMVerify([agcColorsMock colorForString:@"AC"]);
 }
 
 @end
