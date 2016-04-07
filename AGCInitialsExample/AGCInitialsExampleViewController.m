@@ -4,8 +4,11 @@
 //
 
 #import "AGCInitialsExampleViewController.h"
+#import "UIImageView+AGCInitials.h"
 
 @interface AGCInitialsExampleViewController ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -14,6 +17,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [_imageView agc_setImageWithInitials:@"AC"];
 }
 
 @end
