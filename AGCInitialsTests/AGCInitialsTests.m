@@ -6,7 +6,7 @@
 #import <XCTest/XCTest.h>
 #import "UIImageView+AGCInitials.h"
 #import "OCMock.h"
-#import "ACGInitialsColors.h"
+#import "AGCInitialsColors.h"
 
 @interface AGCInitialsTests : XCTestCase
 
@@ -37,7 +37,8 @@
 
 -(void)testColorForStringIsCalledCorrectly
 {
-    id acgColorsMock = OCMClassMock([ACGInitialsColors class]);
+    //id agcColorsMock = OCMPartialMock([AGCInitialsColors sharedInstance]);
+    
 }
 
 @end

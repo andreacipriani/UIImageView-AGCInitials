@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70832C5FA79791E7EA65CB49 /* libPods-AGCInitialsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E6346E5FB9CB478C220AD9 /* libPods-AGCInitialsTests.a */; };
 		86A44D0D1CB657BC0004A558 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A44D0C1CB657BC0004A558 /* main.m */; };
 		86A44D101CB657BC0004A558 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A44D0F1CB657BC0004A558 /* AppDelegate.m */; };
 		86A44D131CB657BC0004A558 /* AGCInitialsExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A44D121CB657BC0004A558 /* AGCInitialsExampleViewController.m */; };
 		86A44D161CB657BC0004A558 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86A44D141CB657BC0004A558 /* Main.storyboard */; };
 		86A44D181CB657BC0004A558 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86A44D171CB657BC0004A558 /* Assets.xcassets */; };
 		86A44D1B1CB657BC0004A558 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86A44D191CB657BC0004A558 /* LaunchScreen.storyboard */; };
-		86A44D261CB657BD0004A558 /* ACGInitialsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A44D251CB657BD0004A558 /* ACGInitialsTests.m */; };
+		86A44D261CB657BD0004A558 /* AGCInitialsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A44D251CB657BD0004A558 /* AGCInitialsTests.m */; };
 		86A44D331CB658EF0004A558 /* UIImageView+AGCInitials.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A44D321CB658EF0004A558 /* UIImageView+AGCInitials.m */; };
-		86EAFC141CB6955400C56FD8 /* ACGInitialsColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EAFC131CB6955400C56FD8 /* ACGInitialsColors.m */; };
-		86EAFC161CB6974A00C56FD8 /* ACGInitialsColorsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EAFC151CB6974A00C56FD8 /* ACGInitialsColorsTests.m */; };
+		86EAFC141CB6955400C56FD8 /* AGCInitialsColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EAFC131CB6955400C56FD8 /* AGCInitialsColors.m */; };
+		86EAFC161CB6974A00C56FD8 /* AGCInitialsColorsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EAFC151CB6974A00C56FD8 /* AGCInitialsColorsTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28EAC2CDE97B6712A192B674 /* Pods-AGCInitialsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AGCInitialsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AGCInitialsTests/Pods-AGCInitialsTests.release.xcconfig"; sourceTree = "<group>"; };
 		86A44D081CB657BC0004A558 /* AGCInitials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AGCInitials.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A44D0C1CB657BC0004A558 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		86A44D0E1CB657BC0004A558 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -41,13 +43,15 @@
 		86A44D1A1CB657BC0004A558 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86A44D1C1CB657BC0004A558 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86A44D211CB657BD0004A558 /* AGCInitials.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AGCInitials.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		86A44D251CB657BD0004A558 /* ACGInitialsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACGInitialsTests.m; sourceTree = "<group>"; };
+		86A44D251CB657BD0004A558 /* AGCInitialsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGCInitialsTests.m; sourceTree = "<group>"; };
 		86A44D271CB657BD0004A558 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86A44D311CB658EF0004A558 /* UIImageView+AGCInitials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AGCInitials.h"; sourceTree = "<group>"; };
 		86A44D321CB658EF0004A558 /* UIImageView+AGCInitials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AGCInitials.m"; sourceTree = "<group>"; };
-		86EAFC121CB6955400C56FD8 /* ACGInitialsColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACGInitialsColors.h; sourceTree = "<group>"; };
-		86EAFC131CB6955400C56FD8 /* ACGInitialsColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACGInitialsColors.m; sourceTree = "<group>"; };
-		86EAFC151CB6974A00C56FD8 /* ACGInitialsColorsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACGInitialsColorsTests.m; sourceTree = "<group>"; };
+		86EAFC121CB6955400C56FD8 /* AGCInitialsColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGCInitialsColors.h; sourceTree = "<group>"; };
+		86EAFC131CB6955400C56FD8 /* AGCInitialsColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGCInitialsColors.m; sourceTree = "<group>"; };
+		86EAFC151CB6974A00C56FD8 /* AGCInitialsColorsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGCInitialsColorsTests.m; sourceTree = "<group>"; };
+		99D15A3D1FC19E5A3CA280DF /* Pods-AGCInitialsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AGCInitialsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AGCInitialsTests/Pods-AGCInitialsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F2E6346E5FB9CB478C220AD9 /* libPods-AGCInitialsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AGCInitialsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,12 +66,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70832C5FA79791E7EA65CB49 /* libPods-AGCInitialsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0EC7A55C7A8542B105317FD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F2E6346E5FB9CB478C220AD9 /* libPods-AGCInitialsTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		86A44CFF1CB657BC0004A558 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +88,8 @@
 				86A44D241CB657BD0004A558 /* AGCInitialsTests */,
 				86A44D091CB657BC0004A558 /* Products */,
 				86A44D301CB658C20004A558 /* UIImageView+AGCInitials */,
+				DC4521872FAE0C6FF125FBFA /* Pods */,
+				0EC7A55C7A8542B105317FD0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,8 +129,8 @@
 		86A44D241CB657BD0004A558 /* AGCInitialsTests */ = {
 			isa = PBXGroup;
 			children = (
-				86A44D251CB657BD0004A558 /* ACGInitialsTests.m */,
-				86EAFC151CB6974A00C56FD8 /* ACGInitialsColorsTests.m */,
+				86A44D251CB657BD0004A558 /* AGCInitialsTests.m */,
+				86EAFC151CB6974A00C56FD8 /* AGCInitialsColorsTests.m */,
 				86A44D271CB657BD0004A558 /* Info.plist */,
 			);
 			path = AGCInitialsTests;
@@ -126,10 +141,19 @@
 			children = (
 				86A44D311CB658EF0004A558 /* UIImageView+AGCInitials.h */,
 				86A44D321CB658EF0004A558 /* UIImageView+AGCInitials.m */,
-				86EAFC121CB6955400C56FD8 /* ACGInitialsColors.h */,
-				86EAFC131CB6955400C56FD8 /* ACGInitialsColors.m */,
+				86EAFC121CB6955400C56FD8 /* AGCInitialsColors.h */,
+				86EAFC131CB6955400C56FD8 /* AGCInitialsColors.m */,
 			);
 			path = "UIImageView+AGCInitials";
+			sourceTree = "<group>";
+		};
+		DC4521872FAE0C6FF125FBFA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				99D15A3D1FC19E5A3CA280DF /* Pods-AGCInitialsTests.debug.xcconfig */,
+				28EAC2CDE97B6712A192B674 /* Pods-AGCInitialsTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,9 +180,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86A44D2D1CB657BD0004A558 /* Build configuration list for PBXNativeTarget "AGCInitialsTests" */;
 			buildPhases = (
+				477C59E43B43198EF2FE2BD7 /* Check Pods Manifest.lock */,
 				86A44D1D1CB657BD0004A558 /* Sources */,
 				86A44D1E1CB657BD0004A558 /* Frameworks */,
 				86A44D1F1CB657BD0004A558 /* Resources */,
+				B3BC08CE3949FD27CA4A2CFE /* Embed Pods Frameworks */,
+				1703E456ED4C1AD88A7E0865 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -226,13 +253,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1703E456ED4C1AD88A7E0865 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AGCInitialsTests/Pods-AGCInitialsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		477C59E43B43198EF2FE2BD7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B3BC08CE3949FD27CA4A2CFE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AGCInitialsTests/Pods-AGCInitialsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		86A44D041CB657BC0004A558 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				86A44D131CB657BC0004A558 /* AGCInitialsExampleViewController.m in Sources */,
-				86EAFC141CB6955400C56FD8 /* ACGInitialsColors.m in Sources */,
+				86EAFC141CB6955400C56FD8 /* AGCInitialsColors.m in Sources */,
 				86A44D101CB657BC0004A558 /* AppDelegate.m in Sources */,
 				86A44D0D1CB657BC0004A558 /* main.m in Sources */,
 				86A44D331CB658EF0004A558 /* UIImageView+AGCInitials.m in Sources */,
@@ -243,8 +318,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86EAFC161CB6974A00C56FD8 /* ACGInitialsColorsTests.m in Sources */,
-				86A44D261CB657BD0004A558 /* ACGInitialsTests.m in Sources */,
+				86EAFC161CB6974A00C56FD8 /* AGCInitialsColorsTests.m in Sources */,
+				86A44D261CB657BD0004A558 /* AGCInitialsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,11 +461,12 @@
 		};
 		86A44D2E1CB657BD0004A558 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99D15A3D1FC19E5A3CA280DF /* Pods-AGCInitialsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = AGCInitialsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.acg.ACGInitialsExampleTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.agc.AGCInitialsExampleTests;
 				PRODUCT_NAME = AGCInitials;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AGCInitials.app/AGCInitials";
 			};
@@ -398,11 +474,12 @@
 		};
 		86A44D2F1CB657BD0004A558 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28EAC2CDE97B6712A192B674 /* Pods-AGCInitialsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = AGCInitialsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.acg.ACGInitialsExampleTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.agc.AGCInitialsExampleTests;
 				PRODUCT_NAME = AGCInitials;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AGCInitials.app/AGCInitials";
 			};

@@ -4,12 +4,14 @@
 //
 
 #import "UIImageView+AGCInitials.h"
+#import "AGCInitialsColors.h"
 
 @implementation UIImageView (AGCInitials)
 
 - (void)agc_setImageWithInitials:(nonnull NSString*)initials
 {
-    [self acg_fillImageWithColor:[UIColor redColor]];
+    UIColor* colorForInitials = [[AGCInitialsColors sharedInstance] colorForString:initials];
+    [self acg_fillImageWithColor:colorForInitials];
 }
 
 - (void)agc_setImageWithInitialsFromName:(nonnull NSString*)name separatedByString:(nonnull NSString*)separator
