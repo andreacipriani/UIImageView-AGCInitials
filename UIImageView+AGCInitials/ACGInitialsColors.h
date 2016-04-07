@@ -9,6 +9,8 @@
 @interface ACGInitialsColors : NSObject
 
 + (id _Nonnull)sharedInstance;
+
 @property (nonatomic, nonnull, strong) NSArray<UIColor*>* colorPalette;
+-  (UIColor* _Nonnull)colorForString:(NSString*)string;
 
 @end

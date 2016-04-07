@@ -7,6 +7,8 @@
 
 @interface ACGInitialsColors ()
 
+@property (nonatomic, strong) NSMutableDictionary<NSString*, UIColor*>* cachedColorsForStrings;
+
 @end
 
 @implementation ACGInitialsColors
@@ -28,6 +30,7 @@
         return nil;
     }
     _colorPalette = [self defaultColorPalette];
+    _cachedColorsForStrings = [NSMutableDictionary new];
     return self;
 }
 
@@ -44,6 +47,41 @@
 - (void)setPalette:(NSArray<UIColor*>*)colorPalette
 {
     _colorPalette = colorPalette;
+}
+
+- (UIColor* _Nonnull)colorForString:(NSString*)string
+{
+    if (string == nil){
+        string = @"";
+    }
+    if ([self cachedColorForString:string]) {
+        return [self cachedColorForString:string];
+    }
+    
+    unsigned long hashNumber = djb2StringToLong((unsigned char*)[string UTF8String]);
+    UIColor* color = _colorPalette[hashNumber % [_colorPalette count]];
+    [_cachedColorsForStrings setObject:color forKey:string];
+    return color;
+}
+
+-(UIColor*)cachedColorForString:(NSString*)string
+{
+    return [_cachedColorsForStrings objectForKey:string];
+}
+
+/*
+ http://www.cse.yorku.ca/~oz/hash.html djb2 algorithm to generate an unsigned long hash from a given string
+ 
+ Attention, this method could return different values on differente architectures for the same string
+ */
+unsigned long djb2StringToLong(unsigned char* str)
+{
+    unsigned long hash = 5381;
+    int c;
+    while ((c = *str++)){
+        hash = ((hash << 5) + hash) + c;
+    }
+    return hash;
 }
 
 @end
