@@ -11,6 +11,6 @@
 + (id _Nonnull)sharedInstance;
 
 @property (nonatomic, nonnull, strong) NSArray<UIColor*>* colorPalette;
--  (UIColor* _Nonnull)colorForString:(NSString*)string;
+- (UIColor* _Nonnull)colorForString:(NSString* _Nullable)string;
 
 @end

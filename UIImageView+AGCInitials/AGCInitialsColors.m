@@ -36,6 +36,7 @@
 
 - (NSArray<UIColor*>*)defaultColorPalette
 {
+    //TODO: create a cool default palette
     NSMutableArray<UIColor*>* defaultColorPalette = [NSMutableArray array];
     for (float hue = 0.0; hue < 1.0; hue += 0.05) {
         UIColor* color = [UIColor colorWithHue:hue saturation:0.5 brightness:0.5 alpha:1.0];
