@@ -8,8 +8,9 @@
 @interface UIImageView (AGCInitials)
 
 - (void)agc_setImageWithInitials:(nonnull NSString*)initials;
+- (void)agc_setImageWithInitials:(nonnull NSString*)initials andTextAttributes:(nonnull NSDictionary*)textAttributes;
 - (void)agc_setImageWithInitialsFromName:(nonnull NSString*)name separatedByString:(nonnull NSString*)separator;
-
--(AGCInitialsColors*)agc_initialsColors;
+- (void)agc_setImageWithInitialsFromName:(nonnull NSString*)name separatedByString:(nonnull NSString*)separator withTextAttributes:(nonnull NSDictionary*)textAttributes;
+;
 
 @end
