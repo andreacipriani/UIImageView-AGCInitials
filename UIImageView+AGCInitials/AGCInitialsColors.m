@@ -61,13 +61,13 @@
     
     unsigned long hashNumber = djb2StringToLong((unsigned char*)[string UTF8String]);
     UIColor* color = _colorPalette[hashNumber % [_colorPalette count]];
-    [_cachedColorsForStrings setObject:color forKey:string];
+    _cachedColorsForStrings[string] = color;
     return color;
 }
 
 -(UIColor*)cachedColorForString:(NSString*)string
 {
-    return [_cachedColorsForStrings objectForKey:string];
+    return _cachedColorsForStrings[string];
 }
 
 /*
