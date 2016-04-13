@@ -67,9 +67,8 @@
 }
 
 /*
- http://www.cse.yorku.ca/~oz/hash.html djb2 algorithm to generate an unsigned long hash from a given string
- 
- Attention, this method could return different values on differente architectures for the same string
+ http://www.cse.yorku.ca/~oz/hash.html djb2 algorithm to generate an unsigned long hash from a given string.
+ Attention, it could return different values on different architectures for the same string
  */
 unsigned long djb2StringToLong(unsigned char* str)
 {

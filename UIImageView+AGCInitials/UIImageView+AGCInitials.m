@@ -10,7 +10,7 @@
 
 - (void)agc_setImageWithInitials:(nonnull NSString*)initials
 {
-    NSDictionary* defaultTextAttributes = @{ NSFontAttributeName : [UIFont systemFontOfSize:[self fontSizeForImageViewSize]],
+    NSDictionary* defaultTextAttributes = @{ NSFontAttributeName : [UIFont systemFontOfSize:[self agc_fontSizeForImageViewSize]],
                                              NSForegroundColorAttributeName : [UIColor whiteColor]
                                              };
     [self agc_setImageWithInitials:initials andTextAttributes:defaultTextAttributes];
@@ -67,9 +67,10 @@
 
 #pragma mark - Private utils
 
--(CGFloat)fontSizeForImageViewSize
+-(CGFloat)agc_fontSizeForImageViewSize
 {
-    CGFloat fontSize = [self acg_imageHeight] * 0.4;
+    CGFloat scaleFactor = 0.4;
+    CGFloat fontSize = [self acg_imageHeight] * scaleFactor;
     return fontSize;
 }
 
