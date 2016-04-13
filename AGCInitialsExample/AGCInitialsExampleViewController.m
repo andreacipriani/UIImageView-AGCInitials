@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *circularImageView60;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView30;
 @property (weak, nonatomic) IBOutlet UIImageView *circularImageView30;
+@property (weak, nonatomic) IBOutlet UIImageView *rectangularImageView;
 
 @end
 
@@ -31,6 +32,8 @@
     [_circularImageView60 agc_setImageWithInitials:@"KR"];
     [_imageView30 agc_setImageWithInitialsFromName:@"Brian Jones" separatedByString:@" "];
     [_circularImageView30 agc_setImageWithInitials:@"BJ"];
+    
+    [_rectangularImageView agc_setImageWithInitials:@"RC"];
 }
 
 @end
