@@ -16,6 +16,8 @@
 		86A44D1B1CB657BC0004A558 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86A44D191CB657BC0004A558 /* LaunchScreen.storyboard */; };
 		86A44D261CB657BD0004A558 /* AGCInitialsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A44D251CB657BD0004A558 /* AGCInitialsTests.m */; };
 		86A44D331CB658EF0004A558 /* UIImageView+AGCInitials.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A44D321CB658EF0004A558 /* UIImageView+AGCInitials.m */; };
+		86C64CAA1CBE62D100D6EBEF /* AC_systemfont19_purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C64CA81CBE62D100D6EBEF /* AC_systemfont19_purple.png */; };
+		86C64CB11CBE6B3100D6EBEF /* AC_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C64CB01CBE6B3100D6EBEF /* AC_default.png */; };
 		86CC655D1CBB8BF200CA9F02 /* AGCInitialsExampleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CC655C1CBB8BF200CA9F02 /* AGCInitialsExampleTableViewController.m */; };
 		86E012B61CBCEF26004750E4 /* AGCPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E012B51CBCEF26004750E4 /* AGCPerson.m */; };
 		86EAFC141CB6955400C56FD8 /* AGCInitialsColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EAFC131CB6955400C56FD8 /* AGCInitialsColors.m */; };
@@ -49,6 +51,8 @@
 		86A44D271CB657BD0004A558 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86A44D311CB658EF0004A558 /* UIImageView+AGCInitials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AGCInitials.h"; sourceTree = "<group>"; };
 		86A44D321CB658EF0004A558 /* UIImageView+AGCInitials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AGCInitials.m"; sourceTree = "<group>"; };
+		86C64CA81CBE62D100D6EBEF /* AC_systemfont19_purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AC_systemfont19_purple.png; sourceTree = "<group>"; };
+		86C64CB01CBE6B3100D6EBEF /* AC_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AC_default.png; sourceTree = "<group>"; };
 		86CC655B1CBB8BF200CA9F02 /* AGCInitialsExampleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGCInitialsExampleTableViewController.h; sourceTree = "<group>"; };
 		86CC655C1CBB8BF200CA9F02 /* AGCInitialsExampleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGCInitialsExampleTableViewController.m; sourceTree = "<group>"; };
 		86E012B41CBCEF26004750E4 /* AGCPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGCPerson.h; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 		86A44D241CB657BD0004A558 /* AGCInitialsTests */ = {
 			isa = PBXGroup;
 			children = (
+				86C64CA71CBE62C800D6EBEF /* Res */,
 				86EAFC151CB6974A00C56FD8 /* AGCInitialsColorsTests.m */,
 				86A44D251CB657BD0004A558 /* AGCInitialsTests.m */,
 				86A44D271CB657BD0004A558 /* Info.plist */,
@@ -155,6 +160,15 @@
 				86EAFC131CB6955400C56FD8 /* AGCInitialsColors.m */,
 			);
 			path = "UIImageView+AGCInitials";
+			sourceTree = "<group>";
+		};
+		86C64CA71CBE62C800D6EBEF /* Res */ = {
+			isa = PBXGroup;
+			children = (
+				86C64CA81CBE62D100D6EBEF /* AC_systemfont19_purple.png */,
+				86C64CB01CBE6B3100D6EBEF /* AC_default.png */,
+			);
+			name = Res;
 			sourceTree = "<group>";
 		};
 		DC4521872FAE0C6FF125FBFA /* Pods */ = {
@@ -258,6 +272,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86C64CB11CBE6B3100D6EBEF /* AC_default.png in Resources */,
+				86C64CAA1CBE62D100D6EBEF /* AC_systemfont19_purple.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

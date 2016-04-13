@@ -5,6 +5,8 @@
 
 #import "AGCInitialsColors.h"
 
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
 @interface AGCInitialsColors ()
 
 @property (nonatomic, strong) NSMutableDictionary<NSString*, UIColor*>* cachedColorsForStrings;
@@ -36,13 +38,7 @@
 
 - (NSArray<UIColor*>*)defaultColorPalette
 {
-    //TODO: create a cool default palette
-    NSMutableArray<UIColor*>* defaultColorPalette = [NSMutableArray array];
-    for (float hue = 0.0; hue < 1.0; hue += 0.05) {
-        UIColor* color = [UIColor colorWithHue:hue saturation:0.5 brightness:0.5 alpha:1.0];
-        [defaultColorPalette addObject:color];
-    }
-    return defaultColorPalette;
+    return @[UIColorFromRGB(0x6200EA),UIColorFromRGB(0xC51162),UIColorFromRGB(0x304FFE),UIColorFromRGB(0x2962FF),UIColorFromRGB(0x00BFA5),UIColorFromRGB(0xd50000),UIColorFromRGB(0x00C853),UIColorFromRGB(0x64DD17),UIColorFromRGB(0x00B8D4),UIColorFromRGB(0x827717),UIColorFromRGB(0xFFD600),UIColorFromRGB(0xDD2C00),UIColorFromRGB(0x37474F),UIColorFromRGB(0xBF360C),UIColorFromRGB(0x004D40),UIColorFromRGB(0xe53935),UIColorFromRGB(0x0091EA)];
 }
 
 - (void)setPalette:(NSArray<UIColor*>*)colorPalette
