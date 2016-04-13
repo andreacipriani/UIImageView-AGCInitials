@@ -7,6 +7,9 @@
 #import "AGCPerson.h"
 #import "UIImageView+AGCInitials.h"
 
+#define AGCCELL_IMAGEVIEW_TAG 996
+#define AGCCELL_LABEL_TAG 997
+
 @interface AGCInitialsExampleTableViewController ()
 
 @property (nonatomic, strong) NSDictionary* peopleForInitials;
@@ -111,11 +114,11 @@
 
 - (void)configureAGCCell:(UITableViewCell*)agcCell withPerson:(AGCPerson*)agcPerson
 {
-    UIImageView* cellImageView = (UIImageView*)[agcCell viewWithTag:996];
+    UIImageView* cellImageView = (UIImageView*)[agcCell viewWithTag:AGCCELL_IMAGEVIEW_TAG];
     NSDictionary* initialsTextAttributes = @{ NSFontAttributeName : [UIFont systemFontOfSize:20],
                                       NSForegroundColorAttributeName : [UIColor whiteColor] };
     [cellImageView agc_setImageWithInitialsFromName:agcPerson.name separatedByString:@" " withTextAttributes:initialsTextAttributes];
-    UILabel* cellLabel = (UILabel*)[agcCell viewWithTag:997];
+    UILabel* cellLabel = (UILabel*)[agcCell viewWithTag:AGCCELL_LABEL_TAG];
     cellLabel.text = agcPerson.name;
 }
 

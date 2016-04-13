@@ -22,12 +22,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [_imageView120 agc_setImageWithInitialsFromName:@"Andrea Cipriani" separatedByString:@" "];
-    [_circularImageView120 agc_setImageWithInitials:@"AC"];
-    [_imageView60 agc_setImageWithInitialsFromName:@"Mick Jagger" separatedByString:@" "];
-    [_circularImageView60 agc_setImageWithInitials:@"MJ"];
-    [_imageView30 agc_setImageWithInitialsFromName:@"Keith Richards" separatedByString:@" "];
-    [_circularImageView30 agc_setImageWithInitials:@"KR"];
+    
+    self.title = @"AGC Initials Example";
+    
+    [_imageView120 agc_setImageWithInitialsFromName:@"Mick Jagger" separatedByString:@" "];
+    [_circularImageView120 agc_setImageWithInitials:@"MJ"];
+    [_imageView60 agc_setImageWithInitialsFromName:@"Keith Richards" separatedByString:@" "];
+    [_circularImageView60 agc_setImageWithInitials:@"KR"];
+    [_imageView30 agc_setImageWithInitialsFromName:@"Brian Jones" separatedByString:@" "];
+    [_circularImageView30 agc_setImageWithInitials:@"BJ"];
 }
 
 @end
