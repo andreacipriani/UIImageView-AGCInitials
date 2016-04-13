@@ -1,0 +1,6 @@
+framework module Pods_UIImageView_AGCInitials_Tests {
+  umbrella header "Pods-UIImageView-AGCInitials_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
