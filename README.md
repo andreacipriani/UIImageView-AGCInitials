@@ -46,7 +46,7 @@ Import the category
 ```objective-c
 #import "UIImageView+AGCInitials.h"
 ```
-and then it's just one line of code:
+and then just use it:
 
 ```objective-c
 [_anImageView agc_setImageWithInitialsFromName:@"Mick Jagger" separatedByString:@" "];
@@ -62,7 +62,7 @@ NSDictionary* initialsTextAttributes = @{ NSFontAttributeName : [UIFont systemFo
 [cellImageView agc_setImageWithInitialsFromName:@"Mick Jagger" separatedByString:@" " withTextAttributes:initialsTextAttributes];
 ```
 
-You can also customize the color palette used to generate background colors:
+You can also customize the **color palette** used to generate background colors:
 
 ```objective-c
 #import "AGCInitialsColors.h"
