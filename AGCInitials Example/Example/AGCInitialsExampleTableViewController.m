@@ -115,8 +115,7 @@
 - (void)configureAGCCell:(UITableViewCell*)agcCell withPerson:(AGCPerson*)agcPerson
 {
     UIImageView* cellImageView = (UIImageView*)[agcCell viewWithTag:AGCCELL_IMAGEVIEW_TAG];
-    NSDictionary* initialsTextAttributes = @{ NSFontAttributeName : [UIFont systemFontOfSize:20],
-                                      NSForegroundColorAttributeName : [UIColor whiteColor] };
+    NSDictionary* initialsTextAttributes = @{ NSFontAttributeName : [UIFont systemFontOfSize:20],NSForegroundColorAttributeName : [UIColor whiteColor] };
     [cellImageView agc_setImageWithInitialsFromName:agcPerson.name separatedByString:@" " withTextAttributes:initialsTextAttributes];
     UILabel* cellLabel = (UILabel*)[agcCell viewWithTag:AGCCELL_LABEL_TAG];
     cellLabel.text = agcPerson.name;

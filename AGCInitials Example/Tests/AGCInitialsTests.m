@@ -62,7 +62,6 @@
 {
     NSDictionary* initialsTextAttributes = @{ NSFontAttributeName : [UIFont systemFontOfSize:19], NSForegroundColorAttributeName : [UIColor purpleColor] };
     [_imageView agc_setImageWithInitials:@"AC" andTextAttributes:initialsTextAttributes];
-    //NSAssert([self isContentOfImage:expectedImage equalToContentOfImage:currentImage], @"Image with AC initials and custom text attributes is not the expected one");
     //TODO: use fbsnapshots
 }
 
