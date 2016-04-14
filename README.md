@@ -7,7 +7,7 @@
 
 ## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project, clone the repo, and run `pod install` from the Example directory first. Or you can see a demo here: https://appetize.io/app/1h801604jew4ppeeqt67qn54n4
 
 ## Requirements
 
@@ -17,6 +17,8 @@ iOS 7+
 
 UIImageView-AGCInitials is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
+
+Or just copy and paste AGCInitialsColors.h/m and UIImageView+AGCInitials.h/m classes into your project.
 
 ```ruby
 pod "UIImageView-AGCInitials"
