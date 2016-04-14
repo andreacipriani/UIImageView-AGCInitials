@@ -20,7 +20,7 @@ There are other categories on Github to set an image placeholder with the initia
 
 With *UIImageView+AGCInitials* it's **super-easy** to set the image placeholder with the contact's initials and background colors will remain the same for identical names, so **you can use it in your table/collection view**. 😎
 
-Plus: good test coverage! 💪
+Plus: good test coverage - easy customization! 💪
 
 ## Requirements
 
