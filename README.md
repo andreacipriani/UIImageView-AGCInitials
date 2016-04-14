@@ -5,13 +5,20 @@
 [![License](https://img.shields.io/cocoapods/l/UIImageView-AGCInitials.svg?style=flat)](http://cocoapods.org/pods/UIImageView-AGCInitials)
 [![Platform](https://img.shields.io/cocoapods/p/UIImageView-AGCInitials.svg?style=flat)](http://cocoapods.org/pods/UIImageView-AGCInitials)
 
+![AGCInitials Example gif](http://i.giphy.com/HyFTIFTbDkF2M.gif)
+
+<!-- 
+![AGCInitials Example screenshot 1](http://i.imgur.com/ZHagHyK.png) 
+![AGCInitials Example screenshot 2](http://i.imgur.com/a5bBMub.png)
+-->
+
 ## Why
 
 When you are displaying contacts in your app it's cool to show a colored placeholder with the contact's initials!
 
 There are other categories on Github to set an image placeholder with the initials of a contact, but they can't' be used inside a Table View because the background color change with cell recycle. 🤔
 
-With **AGCInitials** it's super-easy to set the image placeholder with the contact's initials and background colors will remain the same for identical names, so you can use it in your table/collection view. 😎
+With *UIImageView+AGCInitials* it's **super-easy** to set the image placeholder with the contact's initials and background colors will remain the same for identical names, so **you can use it in your table/collection view**. 😎
 
 Plus: good test coverage! 💪
 
@@ -30,7 +37,7 @@ pod "UIImageView-AGCInitials"
 
 ## Installation without Cocoapods
 
-Copy and paste **AGCInitialsColors.h/m** and **UIImageView+AGCInitials.h/m** classes into your project.
+Copy and paste *AGCInitialsColors.h/m* and *UIImageView+AGCInitials.h/m* classes into your project.
 
 ## How to use it - Basic
 
