@@ -30,7 +30,7 @@ pod "UIImageView-AGCInitials"
 
 ## Installation without Cocoapods
 
-Copy and paste AGCInitialsColors.h/m and UIImageView+AGCInitials.h/m classes into your project.
+Copy and paste **AGCInitialsColors.h/m** and **UIImageView+AGCInitials.h/m** classes into your project.
 
 ## How to use it - Basic
 
