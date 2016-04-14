@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "UIImageView-AGCInitials"
-  s.version          = "0.1.0"
+  s.version          = "0.0.1"
   s.summary          = "An UIImageView category to set initials of a contact's name as the image"
   s.description      = "An UIImageView category that allows to set an image containing the initials of a contact's name on a colored background. The color of the background is the same for identical names."
   s.homepage         = "https://github.com/AndreaCipriani/UIImageView-AGCInitials"
