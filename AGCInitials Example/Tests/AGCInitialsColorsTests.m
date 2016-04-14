@@ -35,19 +35,19 @@
 
 -(void)testColorForStringShouldNotBeNil
 {
-    BOOL colorForFoo = [[AGCInitialsColors sharedInstance] colorForString:@"foo"];
+    UIColor* colorForFoo = [[AGCInitialsColors sharedInstance] colorForString:@"foo"];
     NSAssert(colorForFoo, @"Color for foo string should not be nil");
 }
 
 -(void)testColorForNilStringShouldNotBeNil
 {
-    BOOL colorForNilString = [[AGCInitialsColors sharedInstance] colorForString:nil];
+    UIColor* colorForNilString = [[AGCInitialsColors sharedInstance] colorForString:nil];
     NSAssert(colorForNilString, @"Color for nil string should not be nil");
 }
 
 -(void)testColorForEmptyStringShouldNotBeNil
 {
-    BOOL colorForEmptyString = [[AGCInitialsColors sharedInstance] colorForString:@""];
+    UIColor* colorForEmptyString = [[AGCInitialsColors sharedInstance] colorForString:@""];
     NSAssert(colorForEmptyString, @"Color for empty string should not be nil");
 }
 

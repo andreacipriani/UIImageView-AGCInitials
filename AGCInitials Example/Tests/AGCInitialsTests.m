@@ -8,6 +8,9 @@
 #import "UIImageView+AGCInitials.h"
 #import <XCTest/XCTest.h>
 
+#define IMAGE_VIEW_WIDTH 200
+#define IMAGE_VIEW_HEIGHT 200
+
 @interface AGCInitialsTests : XCTestCase
 
 @property UIImageView* imageView;
@@ -18,7 +21,7 @@
 
 - (void)setUp
 {
-    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, IMAGE_VIEW_WIDTH, IMAGE_VIEW_HEIGHT)];
     [super setUp];
 }
 
@@ -36,9 +39,7 @@
 - (void)testImageWithACGInitials
 {
     [_imageView agc_setImageWithInitials:@"AC"];
-    UIImage* expectedImage = [self imageFromResWithName:@"AC_default" ofType:@"png"];
-    UIImage* currentImage = [self currentPNGImageFromImageView];
-    NSAssert([self isContentOfImage:expectedImage equalToContentOfImage:currentImage], @"Image with AC initials is not the expected one");
+    //TODO: use fbsnapshots
 }
 
 - (void)testImageWithInitialsFromName
@@ -61,9 +62,8 @@
 {
     NSDictionary* initialsTextAttributes = @{ NSFontAttributeName : [UIFont systemFontOfSize:19], NSForegroundColorAttributeName : [UIColor purpleColor] };
     [_imageView agc_setImageWithInitials:@"AC" andTextAttributes:initialsTextAttributes];
-    UIImage* expectedImage = [self imageFromResWithName:@"AC_systemfont19_purple" ofType:@"png"];
-    UIImage* currentImage = [self currentPNGImageFromImageView];
-    NSAssert([self isContentOfImage:expectedImage equalToContentOfImage:currentImage], @"Image with AC initials and custom text attributes is not the expected one");
+    //NSAssert([self isContentOfImage:expectedImage equalToContentOfImage:currentImage], @"Image with AC initials and custom text attributes is not the expected one");
+    //TODO: use fbsnapshots
 }
 
 #pragma mark - Initials + Colors collaboration
@@ -74,30 +74,6 @@
     OCMExpect([agcColorsMock colorForString:@"AC"]);
     [_imageView agc_setImageWithInitials:@"AC"];
     OCMVerifyAll(agcColorsMock);
-}
-
-#pragma mark - Private utils
-
--(BOOL)isContentOfImage:(UIImage*)image1 equalToContentOfImage:(UIImage*)image2
-{
-    NSData *imageData1 = UIImagePNGRepresentation(image1);
-    NSData *imageData2 = UIImagePNGRepresentation(image2);
-    if ([imageData1 isEqualToData:imageData2]) {
-        return YES;
-    }
-    return NO;
-}
-
--(UIImage*)imageFromResWithName:(NSString*)imageName ofType:(NSString*)imageType
-{
-    NSBundle* bundle = [NSBundle bundleForClass:[self class]];
-    NSString* imagePath = [bundle pathForResource:imageName ofType:imageType];
-    return [UIImage imageWithContentsOfFile:imagePath];
-}
-
--(UIImage*)currentPNGImageFromImageView
-{
-    return [UIImage imageWithData:UIImagePNGRepresentation(_imageView.image) scale:1];
 }
 
 @end

@@ -26,8 +26,6 @@
 		86C64CDA1CBE987F00D6EBEF /* AGCInitialsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C64CC41CBE8E2F00D6EBEF /* AGCInitialsTests.m */; };
 		86C64CDB1CBE988400D6EBEF /* AGCInitialsColorsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C64CC31CBE8E2F00D6EBEF /* AGCInitialsColorsTests.m */; };
 		86C64CDD1CBE9A9B00D6EBEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86C64CDC1CBE9A9B00D6EBEF /* LaunchScreen.storyboard */; };
-		86C64CDE1CBE9CEA00D6EBEF /* AC_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C64CCA1CBE8E4F00D6EBEF /* AC_default.png */; };
-		86C64CDF1CBE9CED00D6EBEF /* AC_systemfont19_purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 86C64CCB1CBE8E4F00D6EBEF /* AC_systemfont19_purple.png */; };
 		AC56062B08DDB1BDD278E4EF /* Pods_UIImageView_AGCInitials_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 347DBEE07142FF3FF81F0846 /* Pods_UIImageView_AGCInitials_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -72,8 +70,6 @@
 		86C64CC11CBE8D8F00D6EBEF /* AGCPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGCPerson.m; sourceTree = "<group>"; };
 		86C64CC31CBE8E2F00D6EBEF /* AGCInitialsColorsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGCInitialsColorsTests.m; sourceTree = "<group>"; };
 		86C64CC41CBE8E2F00D6EBEF /* AGCInitialsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGCInitialsTests.m; sourceTree = "<group>"; };
-		86C64CCA1CBE8E4F00D6EBEF /* AC_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AC_default.png; sourceTree = "<group>"; };
-		86C64CCB1CBE8E4F00D6EBEF /* AC_systemfont19_purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AC_systemfont19_purple.png; sourceTree = "<group>"; };
 		86C64CD21CBE8FCE00D6EBEF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		86C64CDC1CBE9A9B00D6EBEF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8CD4167D986821323F28E7D /* Pods_UIImageView_AGCInitials_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIImageView_AGCInitials_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,8 +212,6 @@
 		86C64CCE1CBE8E5100D6EBEF /* Snapshots */ = {
 			isa = PBXGroup;
 			children = (
-				86C64CCA1CBE8E4F00D6EBEF /* AC_default.png */,
-				86C64CCB1CBE8E4F00D6EBEF /* AC_systemfont19_purple.png */,
 			);
 			path = Snapshots;
 			sourceTree = "<group>";
@@ -316,9 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86C64CDF1CBE9CED00D6EBEF /* AC_systemfont19_purple.png in Resources */,
 				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
-				86C64CDE1CBE9CEA00D6EBEF /* AC_default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
