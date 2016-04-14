@@ -9,5 +9,5 @@ language: objective-c
 # - gem install cocoapods # Since Travis is not always on latest version
 # - pod install --project-directory=Example
 script:
-- set -o pipefail && xcodebuild test -workspace AGCInitials\ Example/UIImageView-AGCInitials.xcworkspace -scheme UIImageView-AGCInitials-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty
+- set -o pipefail && xcodebuild test -workspace AGCInitials\ Example/UIImageView-AGCInitials.xcworkspace -scheme UIImageView-AGCInitials-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO -destination 'platform=iOS Simulator, name=iPhone 6' | xcpretty
 - pod lib lint
