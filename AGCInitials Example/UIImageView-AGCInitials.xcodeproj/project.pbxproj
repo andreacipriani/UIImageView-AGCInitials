@@ -117,7 +117,7 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
-				6003F593195388D20070C39A /* Example */,
+				6003F593195388D20070C39A /* Classes */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				4FEA0FF4F554459ABD9C128F /* Pods */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
@@ -148,7 +148,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6003F593195388D20070C39A /* Example */ = {
+		6003F593195388D20070C39A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -164,6 +164,7 @@
 				86C64CDC1CBE9A9B00D6EBEF /* LaunchScreen.storyboard */,
 				86C64CD21CBE8FCE00D6EBEF /* Main.storyboard */,
 			);
+			name = Classes;
 			path = Example;
 			sourceTree = "<group>";
 		};
