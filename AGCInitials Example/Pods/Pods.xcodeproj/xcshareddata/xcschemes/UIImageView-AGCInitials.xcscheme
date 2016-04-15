@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'EF89EDE76B069CF7B2EAEB4A'
+               BlueprintIdentifier = '955D424856D6B31CEB7506CC'
                BlueprintName = 'UIImageView-AGCInitials'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'UIImageView_AGCInitials.framework'>

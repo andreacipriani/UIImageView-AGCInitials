@@ -1,8 +1,8 @@
 {
   "name": "UIImageView-AGCInitials",
-  "version": "0.1.0",
-  "summary": "An UIImageView category to set initials of a contact's name as the image",
-  "description": "An UIImageView category that allows to set an image containing the initials of a contact's name on a colored background. The color of the background is the same for identical names.",
+  "version": "0.0.1",
+  "summary": "An UIImageView category to set the initials of a contact's name as the image placeholder",
+  "description": "An UIImageView category that allows to set an image containing the initials of a contact's name with a colored background. The color of the background is the same for identical names, so you can use it with cell recycle in table/collection view!",
   "homepage": "https://github.com/AndreaCipriani/UIImageView-AGCInitials",
   "screenshots": [
     "http://i.imgur.com/ZHagHyK.png",
@@ -14,17 +14,12 @@
   },
   "source": {
     "git": "https://github.com/AndreaCipriani/UIImageView-AGCInitials.git",
-    "tag": "0.1.0"
+    "tag": "0.0.1"
   },
   "social_media_url": "https://twitter.com/AndreaCipriani",
   "platforms": {
     "ios": "7.0"
   },
   "requires_arc": true,
-  "source_files": "Pod/Classes/**/*",
-  "resource_bundles": {
-    "UIImageView-AGCInitials": [
-      "Pod/Assets/*.png"
-    ]
-  }
+  "source_files": "Pod/Classes/**/*"
 }

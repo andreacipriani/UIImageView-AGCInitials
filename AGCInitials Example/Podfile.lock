@@ -1,6 +1,6 @@
 PODS:
   - OCMock (3.3)
-  - UIImageView-AGCInitials (0.1.0)
+  - UIImageView-AGCInitials (0.0.1)
 
 DEPENDENCIES:
   - OCMock
@@ -12,6 +12,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   OCMock: d68685bde31f69cb61d518dcb39269080c78b5ed
-  UIImageView-AGCInitials: 0fdbcd197570e8ab0ace4ec755cee5f777699963
+  UIImageView-AGCInitials: aefdc6efe445fb6007fbbedc10e0469edf5e8b4e
 
 COCOAPODS: 0.39.0.beta.3
