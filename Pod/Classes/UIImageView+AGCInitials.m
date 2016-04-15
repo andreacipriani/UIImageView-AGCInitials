@@ -41,19 +41,38 @@
 - (NSString*)initialsFromName:(NSString*)name separatedByString:(nonnull NSString*)separator
 {
     NSArray* nameComponents = [name componentsSeparatedByString:separator];
-    BOOL nameComponentsAreEmpty = nameComponents == nil || [nameComponents count] < 1 || [nameComponents[0] isEqualToString:@""] || [nameComponents[0] isEqualToString:@" "];
-    if (nameComponentsAreEmpty) {
+    NSMutableArray* nameComponentsCleaned = [NSMutableArray new];
+    for (NSString* nameComponent in nameComponents){
+        BOOL nameComponentIsNotValid = nameComponent == nil || [nameComponent length] == 0 || [nameComponent isEqualToString:separator] || [self agc_isStringComposedOnlyBySpacesOrNewLines:name];
+        if (nameComponentIsNotValid){
+            continue;
+        }
+        [nameComponentsCleaned addObject:nameComponent];
+    }
+    
+    BOOL nameComponentsCleanedIsEmpty = [nameComponentsCleaned count] < 1;
+    if (nameComponentsCleanedIsEmpty) {
         return @"";
     }
-    NSString* firstComponent = nameComponents[0];
+    NSString* firstComponent = nameComponentsCleaned[0];
     NSString* firstInitial = [firstComponent substringToIndex:1];
     NSString* lastComponent = @"";
     NSString* lastInitial = @"";
-    if ([nameComponents count] > 1) {
-        lastComponent = [nameComponents lastObject];
+    if ([nameComponentsCleaned count] > 1) {
+        lastComponent = [nameComponentsCleaned lastObject];
         lastInitial = [lastComponent substringToIndex:1];
     }
     return [firstInitial stringByAppendingString:lastInitial];
+}
+
+-(BOOL)agc_isStringComposedOnlyBySpacesOrNewLines:(NSString*)string
+{
+    NSCharacterSet *whiteSpaceAndNewLinesSet = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+    if ([[string stringByTrimmingCharactersInSet:whiteSpaceAndNewLinesSet] length] == 0)
+    {
+        return YES;
+    }
+    return NO;
 }
 
 - (UIImage*)agc_imageWithInitials:(NSString*)initials withTextAttributes:(NSDictionary*)textAttributes

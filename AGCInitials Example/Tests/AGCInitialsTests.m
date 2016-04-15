@@ -1,7 +1,6 @@
 //
 //  Created by Andrea Cipriani on 07/04/16.
 //
-//
 
 #import "AGCInitialsColors.h"
 #import "OCMock.h"
@@ -42,6 +41,15 @@
     //TODO: use fbsnapshots
 }
 
+- (void)testInitialsCustomTextAttributes
+{
+    NSDictionary* initialsTextAttributes = @{ NSFontAttributeName : [UIFont systemFontOfSize:19], NSForegroundColorAttributeName : [UIColor purpleColor] };
+    [_imageView agc_setImageWithInitials:@"AC" andTextAttributes:initialsTextAttributes];
+    //TODO: use fbsnapshots
+}
+
+#pragma mark - Test initials from name
+
 - (void)testImageWithInitialsFromName
 {
     id imageViewMock = OCMPartialMock(_imageView);
@@ -62,7 +70,7 @@
 {
     id imageViewMock = OCMPartialMock(_imageView);
     OCMExpect([imageViewMock agc_setImageWithInitials:@""]);
-    [imageViewMock agc_setImageWithInitialsFromName:@" " separatedByString:@"foo"];
+    [imageViewMock agc_setImageWithInitialsFromName:@" " separatedByString:@" "];
     OCMVerifyAll(imageViewMock);
 }
 
@@ -74,11 +82,20 @@
     OCMVerifyAll(imageViewMock);
 }
 
-- (void)testInitialsCustomTextAttributes
+- (void)testInitialsForNameThatStartsWithSeparator
 {
-    NSDictionary* initialsTextAttributes = @{ NSFontAttributeName : [UIFont systemFontOfSize:19], NSForegroundColorAttributeName : [UIColor purpleColor] };
-    [_imageView agc_setImageWithInitials:@"AC" andTextAttributes:initialsTextAttributes];
-    //TODO: use fbsnapshots
+    id imageViewMock = OCMPartialMock(_imageView);
+    OCMExpect([imageViewMock agc_setImageWithInitials:@"AC"]);
+    [imageViewMock agc_setImageWithInitialsFromName:@" Andrea Cipriani" separatedByString:@" "];
+    OCMVerifyAll(imageViewMock);
+}
+
+- (void)testInitialsForNameWithMoreThanOneConsecutiveSeparator
+{
+    id imageViewMock = OCMPartialMock(_imageView);
+    OCMExpect([imageViewMock agc_setImageWithInitials:@"AC"]);
+    [imageViewMock agc_setImageWithInitialsFromName:@" Andrea    Cipriani   " separatedByString:@" "];
+    OCMVerifyAll(imageViewMock);
 }
 
 #pragma mark - Initials + Colors collaboration
