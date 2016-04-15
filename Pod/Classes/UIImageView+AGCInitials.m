@@ -41,18 +41,19 @@
 - (NSString*)initialsFromName:(NSString*)name separatedByString:(nonnull NSString*)separator
 {
     NSArray* nameComponents = [name componentsSeparatedByString:separator];
-    if (nameComponents == nil || [nameComponents count] <= 0) {
+    BOOL nameComponentsAreEmpty = nameComponents == nil || [nameComponents count] < 1 || [nameComponents[0] isEqualToString:@""] || [nameComponents[0] isEqualToString:@" "];
+    if (nameComponentsAreEmpty) {
         return @"";
     }
-    NSString* nameFirstComponent = nameComponents[0];
-    NSString* nameFirstComponentInitial = [nameFirstComponent substringToIndex:1];
-    NSString* nameSecondComponent = @"";
-    NSString* nameSecondComponentInitial = @"";
+    NSString* firstComponent = nameComponents[0];
+    NSString* firstInitial = [firstComponent substringToIndex:1];
+    NSString* lastComponent = @"";
+    NSString* lastInitial = @"";
     if ([nameComponents count] > 1) {
-        nameSecondComponent = nameComponents[1];
-        nameSecondComponentInitial = [nameSecondComponent substringToIndex:1];
+        lastComponent = [nameComponents lastObject];
+        lastInitial = [lastComponent substringToIndex:1];
     }
-    return [nameFirstComponentInitial stringByAppendingString:nameSecondComponentInitial];
+    return [firstInitial stringByAppendingString:lastInitial];
 }
 
 - (UIImage*)agc_imageWithInitials:(NSString*)initials withTextAttributes:(NSDictionary*)textAttributes

@@ -58,6 +58,22 @@
     OCMVerifyAll(imageViewMock);
 }
 
+- (void)testInitialsForEmptyNameComponentsShouldBeEmpty
+{
+    id imageViewMock = OCMPartialMock(_imageView);
+    OCMExpect([imageViewMock agc_setImageWithInitials:@""]);
+    [imageViewMock agc_setImageWithInitialsFromName:@" " separatedByString:@"foo"];
+    OCMVerifyAll(imageViewMock);
+}
+
+- (void)testInitialsForNameWithMoreThanTwoComponentsShouldUseFirstAndLastComponent
+{
+    id imageViewMock = OCMPartialMock(_imageView);
+    OCMExpect([imageViewMock agc_setImageWithInitials:@"AC"]);
+    [imageViewMock agc_setImageWithInitialsFromName:@"Andrea Guido Cipriani" separatedByString:@" "];
+    OCMVerifyAll(imageViewMock);
+}
+
 - (void)testInitialsCustomTextAttributes
 {
     NSDictionary* initialsTextAttributes = @{ NSFontAttributeName : [UIFont systemFontOfSize:19], NSForegroundColorAttributeName : [UIColor purpleColor] };
