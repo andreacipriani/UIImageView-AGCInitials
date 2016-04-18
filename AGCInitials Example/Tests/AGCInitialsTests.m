@@ -36,19 +36,6 @@
     NSAssert(_imageView.image, @"Image is nil after setting with initials");
 }
 
-- (void)testImageWithACGInitials
-{
-    [_imageView agc_setImageWithInitials:@"AC"];
-    //TODO: use fbsnapshots
-}
-
-- (void)testInitialsCustomTextAttributes
-{
-    NSDictionary* initialsTextAttributes = @{ NSFontAttributeName : [UIFont systemFontOfSize:19], NSForegroundColorAttributeName : [UIColor purpleColor] };
-    [_imageView agc_setImageWithInitials:@"AC" andTextAttributes:initialsTextAttributes];
-    //TODO: use fbsnapshots
-}
-
 #pragma mark - Test initials from name
 
 - (void)testImageWithInitialsFromName

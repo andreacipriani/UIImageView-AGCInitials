@@ -83,9 +83,11 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-UIImageView-AGCInitials_Tests/UIImageView_AGCInitials.framework"
+  install_framework "Pods-UIImageView-AGCInitials_Tests/FBSnapshotTestCase.framework"
   install_framework "Pods-UIImageView-AGCInitials_Tests/OCMock.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-UIImageView-AGCInitials_Tests/UIImageView_AGCInitials.framework"
+  install_framework "Pods-UIImageView-AGCInitials_Tests/FBSnapshotTestCase.framework"
   install_framework "Pods-UIImageView-AGCInitials_Tests/OCMock.framework"
 fi
