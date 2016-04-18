@@ -32,7 +32,9 @@
 {
     UIImageView *imageViewWithInitials_AC = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, IMAGE_VIEW_WIDTH, IMAGE_VIEW_HEIGHT)];
     [imageViewWithInitials_AC agc_setImageWithInitials:@"AC"];
-    FBSnapshotVerifyView(imageViewWithInitials_AC, nil);
+    if ([self isRetinaDisplay]){
+        FBSnapshotVerifyView(imageViewWithInitials_AC, nil);
+    }
 }
 
 - (void)testImageViewWithInitials_AC_SystemFontSize19_PurpleColor
@@ -41,7 +43,14 @@
 
     NSDictionary* initialsTextAttributes = @{ NSFontAttributeName : [UIFont systemFontOfSize:19], NSForegroundColorAttributeName : [UIColor purpleColor] };
     [imageViewWithInitials_AC_SystemFontSize19_PurpleColor agc_setImageWithInitials:@"AC" andTextAttributes:initialsTextAttributes];
-    FBSnapshotVerifyView(imageViewWithInitials_AC_SystemFontSize19_PurpleColor, nil);
+    if ([self isRetinaDisplay]){
+        FBSnapshotVerifyView(imageViewWithInitials_AC_SystemFontSize19_PurpleColor, nil);
+    }
 }
 
+-(BOOL)isRetinaDisplay
+{
+    return [[UIScreen mainScreen] scale] > 1.00;
+}
+        
 @end
