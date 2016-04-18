@@ -75,7 +75,7 @@ NSArray<UIColor*>* yourColorPalette; //...
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first. 
 
-You can also see a demo online here: https://appetize.io/app/1h801604jew4ppeeqt67qn54n4
+You can even [try the example online with Appetize](https://appetize.io/app/xux5c10x6a3851ryz9ywddu4ng)
 
 ## Author
 
