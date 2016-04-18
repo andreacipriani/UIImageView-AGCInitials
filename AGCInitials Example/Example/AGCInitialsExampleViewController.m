@@ -33,9 +33,6 @@
     [_imageView30 agc_setImageWithInitialsFromName:@"Brian Jones" separatedByString:@" "];
     [_circularImageView30 agc_setImageWithInitials:@"BJ"];
     [_rectangularImageView agc_setImageWithInitials:@"RC"];
-    
-    NSString *fbRef = [[NSProcessInfo processInfo] environment][@"FB_REFERENCE_IMAGE_DIR"];
-    NSLog(@"%@",fbRef);
 }
 
 @end
