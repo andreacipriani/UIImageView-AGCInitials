@@ -5,6 +5,7 @@
 #import "AGCInitialsColors.h"
 #import "OCMock.h"
 #import "UIImageView+AGCInitials.h"
+#import "AGCInitialsForTesting.h"
 #import <XCTest/XCTest.h>
 
 #define IMAGE_VIEW_WIDTH 200
@@ -53,7 +54,7 @@
 - (void)testImageWithInitialsFromName
 {
     id imageViewMock = OCMPartialMock(_imageView);
-    OCMExpect([imageViewMock agc_setImageWithInitials:@"AC"]);
+    OCMExpect([imageViewMock agc_setImageWithInitials:@"AC" stringForColor:@"Andrea Cipriani" textAttributes:[OCMArg any]]);
     [imageViewMock agc_setImageWithInitialsFromName:@"Andrea Cipriani" separatedByString:@" "];
     OCMVerifyAll(imageViewMock);
 }
@@ -61,7 +62,7 @@
 - (void)testImageWithInitialsWithWrongSeparator
 {
     id imageViewMock = OCMPartialMock(_imageView);
-    OCMExpect([imageViewMock agc_setImageWithInitials:@"A"]);
+    OCMExpect([imageViewMock agc_setImageWithInitials:@"A" stringForColor:@"Andrea Cipriani" textAttributes:[OCMArg any]]);
     [imageViewMock agc_setImageWithInitialsFromName:@"Andrea Cipriani" separatedByString:@"*"];
     OCMVerifyAll(imageViewMock);
 }
@@ -69,7 +70,7 @@
 - (void)testInitialsForEmptyNameComponentsShouldBeEmpty
 {
     id imageViewMock = OCMPartialMock(_imageView);
-    OCMExpect([imageViewMock agc_setImageWithInitials:@""]);
+    OCMExpect([imageViewMock agc_setImageWithInitials:@"" stringForColor:@" " textAttributes:[OCMArg any]]);
     [imageViewMock agc_setImageWithInitialsFromName:@" " separatedByString:@" "];
     OCMVerifyAll(imageViewMock);
 }
@@ -77,7 +78,7 @@
 - (void)testInitialsForNameWithMoreThanTwoComponentsShouldUseFirstAndLastComponent
 {
     id imageViewMock = OCMPartialMock(_imageView);
-    OCMExpect([imageViewMock agc_setImageWithInitials:@"AC"]);
+    OCMExpect([imageViewMock agc_setImageWithInitials:@"AC" stringForColor:@"Andrea Guido Cipriani" textAttributes:[OCMArg any]]);
     [imageViewMock agc_setImageWithInitialsFromName:@"Andrea Guido Cipriani" separatedByString:@" "];
     OCMVerifyAll(imageViewMock);
 }
@@ -85,7 +86,7 @@
 - (void)testInitialsForNameThatStartsWithSeparator
 {
     id imageViewMock = OCMPartialMock(_imageView);
-    OCMExpect([imageViewMock agc_setImageWithInitials:@"AC"]);
+    OCMExpect([imageViewMock agc_setImageWithInitials:@"AC" stringForColor:@" Andrea Cipriani" textAttributes:[OCMArg any]]);
     [imageViewMock agc_setImageWithInitialsFromName:@" Andrea Cipriani" separatedByString:@" "];
     OCMVerifyAll(imageViewMock);
 }
@@ -93,14 +94,28 @@
 - (void)testInitialsForNameWithMoreThanOneConsecutiveSeparator
 {
     id imageViewMock = OCMPartialMock(_imageView);
-    OCMExpect([imageViewMock agc_setImageWithInitials:@"AC"]);
+    OCMExpect([imageViewMock agc_setImageWithInitials:@"AC" stringForColor:@" Andrea    Cipriani   " textAttributes:[OCMArg any]]);
     [imageViewMock agc_setImageWithInitialsFromName:@" Andrea    Cipriani   " separatedByString:@" "];
     OCMVerifyAll(imageViewMock);
 }
 
 #pragma mark - Initials + Colors collaboration
 
-- (void)testImageWithInitialsWithColorForString
+-(void)testImageWithDifferentInitialsAndSameNameShouldNotAlwaysHaveSameColor
+{
+    [_imageView agc_setImageWithInitialsFromName:@"Andrea Cipriani" separatedByString:@" "];
+    UIColor *color1 = _imageView.backgroundColor;
+    [_imageView agc_setImageWithInitialsFromName:@"Another Cipriani" separatedByString:@" "];
+    UIColor *color2 = _imageView.backgroundColor;
+    [_imageView agc_setImageWithInitialsFromName:@"Also Cipriani" separatedByString:@" "];
+    UIColor *color3 = _imageView.backgroundColor;
+    [_imageView agc_setImageWithInitialsFromName:@"Aldo Cipriani" separatedByString:@" "];
+    UIColor *color4 = _imageView.backgroundColor;
+    BOOL differentColorsGenerated = (([color1 isEqual:color2] && [color2 isEqual:color3] && [color3 isEqual:color4]) == NO);
+    NSAssert(differentColorsGenerated,@"Color for same initials but different names don't have to be equal!");
+}
+
+- (void)testImageWithInitialsCallsColorForStringWithExpectedArg
 {
     id agcColorsMock = OCMPartialMock([AGCInitialsColors sharedInstance]);
     OCMExpect([agcColorsMock colorForString:@"AC"]);

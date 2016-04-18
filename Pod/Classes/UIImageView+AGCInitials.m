@@ -10,32 +10,49 @@
 
 - (void)agc_setImageWithInitials:(nonnull NSString*)initials
 {
-    NSDictionary* defaultTextAttributes = @{ NSFontAttributeName : [UIFont systemFontOfSize:[self agc_fontSizeForImageViewSize]],
-                                             NSForegroundColorAttributeName : [UIColor whiteColor]
-                                             };
-    [self agc_setImageWithInitials:initials andTextAttributes:defaultTextAttributes];
+    [self agc_setImageWithInitials:initials stringForColor:initials textAttributes:[self agc_defaultTextAttributes]];
 }
 
 - (void)agc_setImageWithInitials:(nonnull NSString*)initials andTextAttributes:(nonnull NSDictionary*)textAttributes
 {
-    NSString* uppercaseInitials = [initials uppercaseString];
-    UIColor* colorForInitials = [[AGCInitialsColors sharedInstance] colorForString:uppercaseInitials];
-    self.backgroundColor = colorForInitials;
-    self.image = [self agc_imageWithInitials:uppercaseInitials withTextAttributes:textAttributes];
+    [self agc_setImageWithInitials:initials stringForColor:initials textAttributes:textAttributes];
 }
 
 - (void)agc_setImageWithInitialsFromName:(nonnull NSString*)name separatedByString:(nonnull NSString*)separator
 {
     NSString* initials = [self initialsFromName:name separatedByString:separator];
-    NSString* uppercaseInitials = [initials uppercaseString];
-    [self agc_setImageWithInitials:uppercaseInitials];
+    [self agc_setImageWithInitials:initials stringForColor:name textAttributes:[self agc_defaultTextAttributes]];
 }
 
 - (void)agc_setImageWithInitialsFromName:(nonnull NSString*)name separatedByString:(nonnull NSString*)separator withTextAttributes:(nonnull NSDictionary*)textAttributes
 {
     NSString* initials = [self initialsFromName:name separatedByString:separator];
+    [self agc_setImageWithInitials:initials stringForColor:name textAttributes:textAttributes];
+}
+
+#pragma mark - Private
+
+- (void)agc_setImageWithInitials:(nonnull NSString*)initials stringForColor:(nonnull NSString*)string textAttributes:(nonnull NSDictionary*)textAttributes
+{
     NSString* uppercaseInitials = [initials uppercaseString];
-    [self agc_setImageWithInitials:uppercaseInitials];
+    if ([string isEqualToString:initials]){
+        string = [string uppercaseString];
+    }
+    [self agc_setBackgroundColorForString:string];
+    self.image = [self agc_imageWithInitials:uppercaseInitials withTextAttributes:textAttributes];
+}
+
+-(NSDictionary*)agc_defaultTextAttributes
+{
+    return  @{ NSFontAttributeName : [UIFont systemFontOfSize:[self agc_fontSizeForImageViewSize]],
+                                             NSForegroundColorAttributeName : [UIColor whiteColor]
+                                             };
+}
+
+-(void)agc_setBackgroundColorForString:(NSString*)string
+{
+    UIColor* colorForString = [[AGCInitialsColors sharedInstance] colorForString:string];
+    self.backgroundColor = colorForString;
 }
 
 - (NSString*)initialsFromName:(NSString*)name separatedByString:(nonnull NSString*)separator
@@ -84,8 +101,6 @@
     [self agc_endContext];
     return newImage;
 }
-
-#pragma mark - Private utils
 
 -(CGFloat)agc_fontSizeForImageViewSize
 {

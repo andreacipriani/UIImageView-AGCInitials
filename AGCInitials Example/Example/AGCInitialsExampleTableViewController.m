@@ -28,12 +28,12 @@
 {
     AGCPerson* alice = [[AGCPerson alloc] initWithName:@"Alice Arnold"];
     AGCPerson* andrea = [[AGCPerson alloc] initWithName:@"Andrea Brew"];
-    AGCPerson* alease = [[AGCPerson alloc] initWithName:@"Alease Media"];
-    AGCPerson* alyssa = [[AGCPerson alloc] initWithName:@"Alyssa Stof"];
+    AGCPerson* alease = [[AGCPerson alloc] initWithName:@"Alease Faidem"];
+    AGCPerson* alyssa = [[AGCPerson alloc] initWithName:@"Alyssa Carstoff"];
     AGCPerson* bob = [[AGCPerson alloc] initWithName:@"Bob Mall"];
     AGCPerson* brigitte = [[AGCPerson alloc] initWithName:@"Brigitte Fell"];
-    AGCPerson* brandi = [[AGCPerson alloc] initWithName:@"Brandi Xou"];
-    AGCPerson* carl = [[AGCPerson alloc] initWithName:@"Carl Male"];
+    AGCPerson* brandi = [[AGCPerson alloc] initWithName:@"Brandi Zou"];
+    AGCPerson* carl = [[AGCPerson alloc] initWithName:@"Carl Sales"];
     AGCPerson* candy = [[AGCPerson alloc] initWithName:@"Candy Tele"];
     AGCPerson* claudette = [[AGCPerson alloc] initWithName:@"Claudette Rima"];
     AGCPerson* dan = [[AGCPerson alloc] initWithName:@"Dan Foo"];
