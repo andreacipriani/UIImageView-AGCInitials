@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name             = "UIImageView-AGCInitials"
-  s.version          = "0.0.1"
+  s.version          = "0.0.2"
   s.summary          = "An UIImageView category to set the initials of a contact's name as the image placeholder"
   s.description      = "An UIImageView category that allows to set an image containing the initials of a contact's name with a colored background. The color of the background is the same for identical names, so you can use it with cell recycle in table/collection view!"
   s.homepage         = "https://github.com/AndreaCipriani/UIImageView-AGCInitials"
-  s.screenshots     = "http://i.imgur.com/ZHagHyK.png", "http://i.imgur.com/a5bBMub.png"
+  s.screenshots     = "https://github.com/andreacipriani/UIImageView-AGCInitials/blob/master/Screenshots/agc_screen1.png", "https://github.com/andreacipriani/UIImageView-AGCInitials/blob/master/Screenshots/agc_screen2.png"
   s.license          = 'MIT'
   s.author           = { "Andrea Cipriani" => "andrea.g.cipriani@gmail.com" }
   s.source           = { :git => "https://github.com/AndreaCipriani/UIImageView-AGCInitials.git", :tag => s.version.to_s }
