@@ -5,8 +5,6 @@
 [![License](https://img.shields.io/cocoapods/l/UIImageView-AGCInitials.svg?style=flat)](http://cocoapods.org/pods/UIImageView-AGCInitials)
 [![Platform](https://img.shields.io/cocoapods/p/UIImageView-AGCInitials.svg?style=flat)](http://cocoapods.org/pods/UIImageView-AGCInitials)
 
-![AGCInitials Example gif](http://i.giphy.com/HyFTIFTbDkF2M.gif)
-
 <!-- 
 ![AGCInitials Example screenshot 1](http://i.imgur.com/ZHagHyK.png) 
 ![AGCInitials Example screenshot 2](http://i.imgur.com/a5bBMub.png)
