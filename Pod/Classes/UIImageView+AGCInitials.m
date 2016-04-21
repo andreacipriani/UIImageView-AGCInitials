@@ -20,25 +20,25 @@
 
 - (void)agc_setImageWithInitialsFromName:(nonnull NSString*)name
 {
-    NSString* initials = [self initialsFromName:name separatedByString:@" "];
+    NSString* initials = [self agc_initialsFromName:name separatedByString:@" "];
     [self agc_setImageWithInitials:initials stringToGenerateColor:name textAttributes:[self agc_defaultTextAttributes]];
 }
 
 - (void)agc_setImageWithInitialsFromName:(nonnull NSString*)name separatedByString:(nonnull NSString*)separator
 {
-    NSString* initials = [self initialsFromName:name separatedByString:separator];
+    NSString* initials = [self agc_initialsFromName:name separatedByString:separator];
     [self agc_setImageWithInitials:initials stringToGenerateColor:name textAttributes:[self agc_defaultTextAttributes]];
 }
 
 - (void)agc_setImageWithInitialsFromName:(nonnull NSString*)name withTextAttributes:(nonnull NSDictionary*)textAttributes
 {
-    NSString* initials = [self initialsFromName:name separatedByString:@" "];
+    NSString* initials = [self agc_initialsFromName:name separatedByString:@" "];
     [self agc_setImageWithInitials:initials stringToGenerateColor:name textAttributes:textAttributes];
 }
 
 - (void)agc_setImageWithInitialsFromName:(nonnull NSString*)name separatedByString:(nonnull NSString*)separator withTextAttributes:(nonnull NSDictionary*)textAttributes
 {
-    NSString* initials = [self initialsFromName:name separatedByString:separator];
+    NSString* initials = [self agc_initialsFromName:name separatedByString:separator];
     [self agc_setImageWithInitials:initials stringToGenerateColor:name textAttributes:textAttributes];
 }
 
@@ -66,7 +66,7 @@
     self.backgroundColor = colorForString;
 }
 
-- (NSString*)initialsFromName:(NSString*)name separatedByString:(nonnull NSString*)separator
+- (NSString*)agc_initialsFromName:(NSString *)name separatedByString:(NSString *)separator
 {
     NSArray* nameComponents = [name componentsSeparatedByString:separator];
     NSMutableArray* nameComponentsCleaned = [NSMutableArray new];
