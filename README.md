@@ -8,16 +8,13 @@
 ![AGCInitials Example screenshot 1](Screenshots/agc_screen1.png)
 ![AGCInitials Example screenshot 2](Screenshots/agc_screen2.png)
 
-When a contact doesn't have an image it's cool to show a colored placeholder with his initials! 
-There are other categories on GitHub to set an image placeholder with the contact's initials, but they can't be used inside a Table/Collection View because the background color of the image changes with cell recycle. 🤔
-
-Don't worry, you can use **AGCInitials** 😉
+ **AGCInitials** is an objc UIImageView category to set the initials of a contact's name as the image placeholder, with a generated background color.
 
 ### Features
 
 - Super easy
 - Background colors will remain the same for identical names, so **you can use it in your table/collection view**. 😎
-- You can set your own color palette
+- You can set your own color palette for background colors
 - Good test coverage 💪
 
 ### How to use it - Basic
@@ -30,20 +27,32 @@ Import the category
 and then just use it:
 
 ```objective-c
-[_anImageView agc_setImageWithInitialsFromName:@"Mick Jagger" separatedByString:@" "];
+[_anImageView agc_setImageWithInitialsFromName:@"Mick Jagger"];
 ```
 The image will contain a placeholder with the initials "MJ" and a generated background color.
 
 ### How to use it - Details
 
-If you want you can **customize the font** by specifying the text attributes:
+- You can set the initials without specifying a name, please note that in this case the background color of the image will always be equal for the same initials:
+
+```objective-c
+- (void)agc_setImageWithInitials:(nonnull NSString*)initials;
+```
+
+- If you use the `initialsFromName` method, then *@"Mick Jagger"* and *@"Micheal Jagger"* will both return *MJ* as initials, but their background color could be different. By default the initials are extracted from a name separating the string with `@" "`. If you need to change the separator use:
+
+```objective-c
+- (void)agc_setImageWithInitialsFromName:(nonnull NSString*)name separatedByString:(nonnull NSString*)separator;
+```
+
+- You can **customize the font** by specifying the text attributes:
 
 ```objective-c
 NSDictionary* initialsTextAttributes = @{ NSFontAttributeName : [UIFont systemFontOfSize:20], NSForegroundColorAttributeName : [UIColor purpleColor] };
 [cellImageView agc_setImageWithInitialsFromName:@"Mick Jagger" separatedByString:@" " withTextAttributes:initialsTextAttributes];
 ```
 
-You can also customize the **color palette** used to generate background colors:
+- You can also change the **color palette** used to generate background colors:
 
 ```objective-c
 #import "AGCInitialsColors.h"
