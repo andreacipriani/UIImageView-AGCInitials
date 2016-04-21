@@ -70,6 +70,7 @@
  http://www.cse.yorku.ca/~oz/hash.html djb2 algorithm to generate an unsigned long hash from a given string.
  Attention, it could return different values on different architectures for the same string
  */
+
 unsigned long agc_djb2StringToLong(unsigned char* str)
 {
     unsigned long hash = 5381;

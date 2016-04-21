@@ -19,7 +19,6 @@
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
-		86C10CC41CC4CF85004DD0E2 /* AGCInitialsForTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C10CC31CC4CF85004DD0E2 /* AGCInitialsForTesting.m */; };
 		86C10CD91CC4DAAA004DD0E2 /* AGCInitialsFBSnapshotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C10CD81CC4DAAA004DD0E2 /* AGCInitialsFBSnapshotTests.m */; };
 		86C64CBE1CBE8D8300D6EBEF /* AGCInitialsExampleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C64CBB1CBE8D8300D6EBEF /* AGCInitialsExampleTableViewController.m */; };
 		86C64CBF1CBE8D8300D6EBEF /* AGCInitialsExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C64CBD1CBE8D8300D6EBEF /* AGCInitialsExampleViewController.m */; };
@@ -64,8 +63,6 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		750557D3FAFD42B35F5EDE83 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
-		86C10CC21CC4CF85004DD0E2 /* AGCInitialsForTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGCInitialsForTesting.h; sourceTree = "<group>"; };
-		86C10CC31CC4CF85004DD0E2 /* AGCInitialsForTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGCInitialsForTesting.m; sourceTree = "<group>"; };
 		86C10CD81CC4DAAA004DD0E2 /* AGCInitialsFBSnapshotTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGCInitialsFBSnapshotTests.m; sourceTree = "<group>"; };
 		86C64CBA1CBE8D8300D6EBEF /* AGCInitialsExampleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGCInitialsExampleTableViewController.h; sourceTree = "<group>"; };
 		86C64CBB1CBE8D8300D6EBEF /* AGCInitialsExampleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGCInitialsExampleTableViewController.m; sourceTree = "<group>"; };
@@ -192,7 +189,6 @@
 				86C64CC31CBE8E2F00D6EBEF /* AGCInitialsColorsTests.m */,
 				86C64CC41CBE8E2F00D6EBEF /* AGCInitialsTests.m */,
 				86C10CD81CC4DAAA004DD0E2 /* AGCInitialsFBSnapshotTests.m */,
-				86C10CC11CC4CF53004DD0E2 /* Testing utils */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -215,15 +211,6 @@
 				FCC3A49EA11212019BAC4B54 /* UIImageView-AGCInitials.podspec */,
 			);
 			path = "Podspec Metadata";
-			sourceTree = "<group>";
-		};
-		86C10CC11CC4CF53004DD0E2 /* Testing utils */ = {
-			isa = PBXGroup;
-			children = (
-				86C10CC21CC4CF85004DD0E2 /* AGCInitialsForTesting.h */,
-				86C10CC31CC4CF85004DD0E2 /* AGCInitialsForTesting.m */,
-			);
-			name = "Testing utils";
 			sourceTree = "<group>";
 		};
 		86C10CD71CC4D7F8004DD0E2 /* ReferenceImages */ = {
@@ -443,7 +430,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86C10CC41CC4CF85004DD0E2 /* AGCInitialsForTesting.m in Sources */,
 				86C64CDB1CBE988400D6EBEF /* AGCInitialsColorsTests.m in Sources */,
 				86C10CD91CC4DAAA004DD0E2 /* AGCInitialsFBSnapshotTests.m in Sources */,
 				86C64CDA1CBE987F00D6EBEF /* AGCInitialsTests.m in Sources */,

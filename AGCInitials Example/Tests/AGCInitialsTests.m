@@ -5,7 +5,6 @@
 #import "AGCInitialsColors.h"
 #import "OCMock.h"
 #import "UIImageView+AGCInitials.h"
-#import "AGCInitialsForTesting.h"
 #import <XCTest/XCTest.h>
 
 #define IMAGE_VIEW_WIDTH 200
@@ -36,12 +35,20 @@
     NSAssert(_imageView.image, @"Image is nil after setting with initials");
 }
 
-#pragma mark - Test initials from name
+#pragma mark - Test initializers call designated initializer
+
+- (void)testImageWithInitialsFromNameWithoutDefaultSeparator
+{
+    id imageViewMock = OCMPartialMock(_imageView);
+    OCMExpect([imageViewMock agc_setImageWithInitials:@"AC" stringToGenerateColor:@"Andrea Cipriani" textAttributes:[OCMArg any]]);
+    [imageViewMock agc_setImageWithInitialsFromName:@"Andrea Cipriani"];
+    OCMVerifyAll(imageViewMock);
+}
 
 - (void)testImageWithInitialsFromName
 {
     id imageViewMock = OCMPartialMock(_imageView);
-    OCMExpect([imageViewMock agc_setImageWithInitials:@"AC" stringForColor:@"Andrea Cipriani" textAttributes:[OCMArg any]]);
+    OCMExpect([imageViewMock agc_setImageWithInitials:@"AC" stringToGenerateColor:@"Andrea Cipriani" textAttributes:[OCMArg any]]);
     [imageViewMock agc_setImageWithInitialsFromName:@"Andrea Cipriani" separatedByString:@" "];
     OCMVerifyAll(imageViewMock);
 }
@@ -49,7 +56,7 @@
 - (void)testImageWithInitialsWithWrongSeparator
 {
     id imageViewMock = OCMPartialMock(_imageView);
-    OCMExpect([imageViewMock agc_setImageWithInitials:@"A" stringForColor:@"Andrea Cipriani" textAttributes:[OCMArg any]]);
+    OCMExpect([imageViewMock agc_setImageWithInitials:@"A" stringToGenerateColor:@"Andrea Cipriani" textAttributes:[OCMArg any]]);
     [imageViewMock agc_setImageWithInitialsFromName:@"Andrea Cipriani" separatedByString:@"*"];
     OCMVerifyAll(imageViewMock);
 }
@@ -57,7 +64,7 @@
 - (void)testInitialsForEmptyNameComponentsShouldBeEmpty
 {
     id imageViewMock = OCMPartialMock(_imageView);
-    OCMExpect([imageViewMock agc_setImageWithInitials:@"" stringForColor:@" " textAttributes:[OCMArg any]]);
+    OCMExpect([imageViewMock agc_setImageWithInitials:@"" stringToGenerateColor:@" " textAttributes:[OCMArg any]]);
     [imageViewMock agc_setImageWithInitialsFromName:@" " separatedByString:@" "];
     OCMVerifyAll(imageViewMock);
 }
@@ -65,7 +72,7 @@
 - (void)testInitialsForNameWithMoreThanTwoComponentsShouldUseFirstAndLastComponent
 {
     id imageViewMock = OCMPartialMock(_imageView);
-    OCMExpect([imageViewMock agc_setImageWithInitials:@"AC" stringForColor:@"Andrea Guido Cipriani" textAttributes:[OCMArg any]]);
+    OCMExpect([imageViewMock agc_setImageWithInitials:@"AC" stringToGenerateColor:@"Andrea Guido Cipriani" textAttributes:[OCMArg any]]);
     [imageViewMock agc_setImageWithInitialsFromName:@"Andrea Guido Cipriani" separatedByString:@" "];
     OCMVerifyAll(imageViewMock);
 }
@@ -73,7 +80,7 @@
 - (void)testInitialsForNameThatStartsWithSeparator
 {
     id imageViewMock = OCMPartialMock(_imageView);
-    OCMExpect([imageViewMock agc_setImageWithInitials:@"AC" stringForColor:@" Andrea Cipriani" textAttributes:[OCMArg any]]);
+    OCMExpect([imageViewMock agc_setImageWithInitials:@"AC" stringToGenerateColor:@" Andrea Cipriani" textAttributes:[OCMArg any]]);
     [imageViewMock agc_setImageWithInitialsFromName:@" Andrea Cipriani" separatedByString:@" "];
     OCMVerifyAll(imageViewMock);
 }
@@ -81,7 +88,7 @@
 - (void)testInitialsForNameWithMoreThanOneConsecutiveSeparator
 {
     id imageViewMock = OCMPartialMock(_imageView);
-    OCMExpect([imageViewMock agc_setImageWithInitials:@"AC" stringForColor:@" Andrea    Cipriani   " textAttributes:[OCMArg any]]);
+    OCMExpect([imageViewMock agc_setImageWithInitials:@"AC" stringToGenerateColor:@" Andrea    Cipriani   " textAttributes:[OCMArg any]]);
     [imageViewMock agc_setImageWithInitialsFromName:@" Andrea    Cipriani   " separatedByString:@" "];
     OCMVerifyAll(imageViewMock);
 }
