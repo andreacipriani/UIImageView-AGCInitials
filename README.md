@@ -13,7 +13,7 @@
 ### Features
 
 - Super easy
-- Background colors will remain the same for identical names, so **you can use it in your table/collection view**. 😎
+- The background color of the image will be the same for the same initials, so **you can use it in your table/collection view**. 😎
 - You can set your own color palette for background colors
 - Good test coverage 💪
 
@@ -33,13 +33,13 @@ The image will contain a placeholder with the initials "MJ" and a generated back
 
 ### How to use it - Details
 
-- You can set the initials without specifying a name, please note that in this case the background color of the image will always be equal for the same initials:
+- You can set the initials without specifying a name, please note that in this case the background color of the image will be the same for the same initials:
 
 ```objective-c
 - (void)agc_setImageWithInitials:(nonnull NSString*)initials;
 ```
 
-- If you use the `initialsFromName` method, then *@"Mick Jagger"* and *@"Micheal Jagger"* will both return *MJ* as initials, but their background color could be different. By default the initials are extracted from a name separating the string with `@" "`. If you need to change the separator use:
+- The `initialsFromName` method for @"Mick Jagger" and @"Micheal Jagger" still returns *MJ* as initials, but their background color could be different. By default the initials are distinguished by `@" "`, but you can change the separator using:
 
 ```objective-c
 - (void)agc_setImageWithInitialsFromName:(nonnull NSString*)name separatedByString:(nonnull NSString*)separator;
