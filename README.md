@@ -29,7 +29,7 @@ and then call the method with the contact's name:
 ```objective-c
 [_anImageView agc_setImageWithInitialsFromName:@"Mick Jagger"];
 ```
-The image will then contain a placeholder with the initials "MJ" and a generated background color.
+The image will then contain a placeholder with the initials "MJ" and a generated background color:
 
 ![Mick Jagger initials example](Screenshots/MJ_green.png)
 
@@ -41,8 +41,8 @@ The image will then contain a placeholder with the initials "MJ" and a generated
 - (void)agc_setImageWithInitials:(nonnull NSString*)initials;
 ```
 
-- The `initialsFromName` method for @"Mick Jagger" and @"Michael Jackson" returns *MJ* as initials, but the background color will be different, since it's generated from the name.
-- 
+- The `initialsFromName` method for @"Mick Jagger" and @"Michael Jackson" returns *MJ* as initials, but the background color will be different, since it's generated from the name:
+
 ![Mick Jagger initials example](Screenshots/MJ_green.png) ![Michael Jackson initials example](Screenshots/MJ_blue.png)
 
 - By default the initials are distinguished by `@" "`, but you can change the separator using:
