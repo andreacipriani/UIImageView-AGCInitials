@@ -40,8 +40,9 @@ The image will then contain a placeholder with the initials "MJ" and a generated
 ```objective-c
 - (void)agc_setImageWithInitials:(nonnull NSString*)initials;
 ```
+![MJ initials example](Screenshots/MJ_green.png) ![MJ initials example](Screenshots/MJ_green.png)
 
-- The `initialsFromName` method for @"Mick Jagger" and @"Michael Jackson" returns *MJ* as initials, but the background color will be different, since it's generated from the name:
+- The `initialsFromName` method for @"Mick Jagger" and @"Michael Jackson" returns *MJ* as initials, but the background color will be probably different, since it's generated from the name:
 
 ![Mick Jagger initials example](Screenshots/MJ_green.png) ![Michael Jackson initials example](Screenshots/MJ_blue.png)
 
