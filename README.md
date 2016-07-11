@@ -8,12 +8,12 @@
 ![AGCInitials Example screenshot 1](Screenshots/agc_screen1.png)
 ![AGCInitials Example screenshot 2](Screenshots/agc_screen2.png)
 
-  **AGCInitials** is an objc UIImageView category to set an image placeholder with the contact's initials and an automatically generated background color.
+  **AGCInitials** is an Objective-C category on UIImageView to set an image placeholder with the contact's initials (letters) and an automatically generated background color.
  
 ### Features
 
 - Use it with one line of code
-- The generated background color of the imageView will be the same for the same initials, so **you can use it in your table/collection view**. 😎
+- The generated background color of the UIImageView will be the same for the same initials, so **you can use it in your table/collection view**. 😎
 - You can set your own color palette for background colors
 - Good test coverage 💪
 
