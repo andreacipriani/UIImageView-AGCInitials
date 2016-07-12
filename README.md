@@ -8,12 +8,12 @@
 ![AGCInitials Example screenshot 1](Screenshots/agc_screen1.png)
 ![AGCInitials Example screenshot 2](Screenshots/agc_screen2.png)
 
-  **AGCInitials** is an objc UIImageView category to set an image placeholder with the contact's initials and an automatically generated background color.
+  **AGCInitials** is an Objective-C category on UIImageView to set an image placeholder with the contact's initials (letters) and an automatically generated background color.
  
 ### Features
 
 - Use it with one line of code
-- The generated background color of the imageView will be the same for the same initials, so **you can use it in your table/collection view**. 😎
+- The generated background color of the UIImageView will be the same for the same initials, so **you can use it in your table/collection view**. 😎
 - You can set your own color palette for background colors
 - Good test coverage 💪
 
@@ -29,7 +29,7 @@ and then call the method with the contact's name:
 ```objective-c
 [_anImageView agc_setImageWithInitialsFromName:@"Mick Jagger"];
 ```
-The image will then contain a placeholder with the initials "MJ" and a generated background color.
+The image will then contain a placeholder with the initials "MJ" and a generated background color:
 
 ![Mick Jagger initials example](Screenshots/MJ_green.png)
 
@@ -40,8 +40,9 @@ The image will then contain a placeholder with the initials "MJ" and a generated
 ```objective-c
 - (void)agc_setImageWithInitials:(nonnull NSString*)initials;
 ```
+![MJ initials example](Screenshots/MJ_green.png) ![MJ initials example](Screenshots/MJ_green.png)
 
-- The `initialsFromName` method for @"Mick Jagger" and @"Michael Jackson" returns *MJ* as initials, but the background color will be different, because it's generated from the name.
+- The `initialsFromName` method for @"Mick Jagger" and @"Michael Jackson" returns *MJ* as initials, but the background color will be probably different, since it's generated from the name:
 
 ![Mick Jagger initials example](Screenshots/MJ_green.png) ![Michael Jackson initials example](Screenshots/MJ_blue.png)
 
