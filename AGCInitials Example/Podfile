@@ -1,11 +1,12 @@
 source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '7.0'
 use_frameworks!
 
-target 'UIImageView-AGCInitials_Example', :exclusive => true do
+target 'UIImageView-AGCInitials_Example'
   pod 'UIImageView-AGCInitials', :path => '../'
 end
 
-target 'UIImageView-AGCInitials_Tests', :exclusive => true do
+target 'UIImageView-AGCInitials_Tests'
   pod 'UIImageView-AGCInitials', :path => '../'
   pod 'OCMock'
   pod 'FBSnapshotTestCase/Core'
