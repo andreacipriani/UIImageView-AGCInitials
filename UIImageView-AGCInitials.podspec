@@ -11,6 +11,8 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/AndreaCipriani'
   s.ios.deployment_target     = '8.0'
   s.tvos.deployment_target    = '9.0'
+   s.xcconfig  =  { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/UIImageView-AGCInitials/Pod/Classes"',
+                   'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/UIImageView-AGCInitials/Pod/Classes"' }
   s.requires_arc = true
   s.source_files = 'Pod/Classes/**/*'
 end
