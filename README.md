@@ -27,7 +27,7 @@ Import the category
 and then call the method with the contact's name:
 
 ```objective-c
-[_anImageView agc_setImageWithInitialsFromName:@"Mick Jagger"];
+[self.imageView agc_setImageWithInitialsFromName:@"Mick Jagger"];
 ```
 The image will then contain a placeholder with the initials "MJ" and a generated background color:
 
